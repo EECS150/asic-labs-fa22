@@ -3,7 +3,7 @@
 Prof. Sophia Shao
 </p>
 <p align="center">
-TAs (ASIC): Dima Nikiforov
+TAs (ASIC): Roger Hsiao, Richard Hu, Hansung Kim, Paul Kwon
 </p>
 <p align="center">
 Department of Electrical Engineering and Computer Science
@@ -24,7 +24,7 @@ Simulation is very important because it is used at multiple stages of the flow t
 We will focus on RTL, or Register Transfer Level, simulation in this lab, but we will also touch a bit on gate level simulation. 
 
 
-As with the previous lab, we will be using the Cory instructional machines (again, preferably `eda-[1-8].eecs.berkeley.edu`, but also `c111-[1-17].eecs.berkeley.edu`).
+As with the previous lab, we will be using the Cory instructional machines (again, preferably `eda-[1-12].eecs.berkeley.edu`, but also `c111-[1-17].eecs.berkeley.edu`).
 
 To begin this lab, get the project files (again, we recommend working in the `/scratch/<your login name>/`:
 
