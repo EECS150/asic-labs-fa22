@@ -4,7 +4,7 @@
 Prof. Sophia Shao
 </p>
 <p align="center">
-TAs (ASIC): Roger Hsiao, Richard Yan, Hansung Kim, Paul Kwon
+TAs (ASIC): Erik Anderson, Roger Hsiao, Hansung Kim, Richard Yan
 </p>
 <p align="center">
 Department of Electrical Engineering and Computer Science
