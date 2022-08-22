@@ -1,4 +1,4 @@
-# EECS 151/251A ASIC Labs Fall 21
+# EECS 151/251A ASIC Labs Fall 22
 
 This lab course consists of 6 labs and a final project. The labs go through the ASIC design flow, from RTL through GDS. 
 These labs are now available in two process technologies, 
