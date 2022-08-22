@@ -31,14 +31,14 @@ Once you login using your CalNet ID, you can click on 'Get a new account' in the
 
 ## Logging into the Classroom Servers
 
-The servers used for this class are primarily `eda-[1-11].eecs.berkeley.edu`.  You may also use the `c111-[1-17].eecs.berkeley.edu` machines
+The servers used for this class are primarily `eda-[1-12].eecs.berkeley.edu`.  You may also use the `c111-[1-17].eecs.berkeley.edu` machines
 (which are physically located in Cory 111/117), although those will be shared with the FPGA lab. You can access all of these machines remotely through SSH.
 
 ### Remote Access
 
 It is important that you can remotely access the instructional servers. There are two convenient ways to remotely access our
 lab machines: SSH (Secure SHell) and X2Go.
-First, select a machine. The range of accessible machines are `eda-X`, where X is a number from 1 to 11,
+First, select a machine. The range of accessible machines are `eda-X`, where X is a number from 1 to 12,
 and `c111-X`, where X is a number from 1 to 17. The fully qualified DNS name (FQDN) of
 your machine is then `eda-X.eecs.berkeley.edu` or `c111-X.eecs.berkeley.edu`. For example,
 if you select machine `eda-8`, the FQDN would be `eda-8.eecs.berkeley.edu`.
@@ -111,13 +111,13 @@ to your instructional account username. For “Session type”, select “GNOME�
 
 ### Getting Started
 
-After you login to one of these servers, you are now ready to start the lab.  You have a limited amount of space in your home directory, so we recommend completing work in the `/scratch/` directory, and then copying any important results to your home directory.
+After you login to one of these servers, you are now ready to start the lab.  You have a limited amount of space in your home directory, so we recommend completing work in the `/home/tmp` directory, and then copying any important results to your home directory.
 
 To begin, get the lab files by typing the following commands:
 
 ```shell
-mkdir /scratch/<your-eecs-username>
-cd /scratch/<your-eecs-username>
+mkdir /home/tmp/<your-eecs-username>
+cd /home/tmp/<your-eecs-username>
 git clone /home/ff/eecs151/labs/lab1
 cd lab1
 ```
@@ -166,7 +166,7 @@ For 1-6 below, submit the command/keystrokes needed to generate the desired resu
 2. What directory is `git` installed in?
 3. Show the hidden files in your lab directory (the one you cloned from `/home/ff/eecs151/labs/lab1`
 4. What version of Vim is installed? Describe how you figured this out.
-5. Copy the files in this lab to `/scratch` and then delete it.
+5. Copy the files in this lab to `/home/tmp/<your-eecs-username>/` and then delete it.
 6. Run `ping www.google.com`, suspend it, then kill the process. Then run it in the background, report its PID, then kill the process.
 7. Run `top` and report the average CPU load, the highest CPU job, and the amount of memory used (just report the results for this question; you don't need to supply the command/how you got it).
 
@@ -427,7 +427,7 @@ read these but are not required to turn in anything for this section.
 
 ## Lab Deliverables
 
-### Lab Due: 11 AM, Friday January 28th, 2022
+### Lab Due: 11 AM, Friday September 9th, 2022
 
 - Submit a written report with all 6 questions answered to Gradescope
 
@@ -447,3 +447,4 @@ Modified By:
 - Sean Huang (2021)
 - Daniel Grubb, Nayiri Krzysztofowicz, Zhaokai Liu (2021)
 - Dima Nikiforov (2022)
+- Roger Hsiao (2022)
