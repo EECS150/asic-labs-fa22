@@ -21,7 +21,7 @@ The goal of this lab is to introduce some basic techniques needed to use the com
 
 ## Administrative Info
 
-This lab, like all labs will be turned in electronically using Gradescope. Please upload a pdf document with the answers to the six questions in the lab.
+This lab, like all the labs in this course, will be turned in electronically using Gradescope. Please upload a pdf document with the answers to the six questions in the lab.
 
 ### Getting an Instructional Account
 
