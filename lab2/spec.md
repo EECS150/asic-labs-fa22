@@ -105,7 +105,7 @@ code. As such, Verilog code for this FIR filter is provided in the src folder.
 We will be using Synopsys VCS as our Verilog simulator in this course.
 VCS works by compiling Verilog modules and generating a simulator binary file. 
 You can then execute that binary file to produce the desired outputs. 
-VCS is one of many Verilog simulators. Others include Cadence Incisive (formerly NCSim) and the open source Verilator.
+VCS is one of many Verilog simulators. Others include Cadence Xcelium (formerly Incisive) and the open source Verilator.
 The framework, mechanisms, and capabilities are quite similar between simulators.
 
 Each CAD tool, including simulators, are highly configurable and can take in tens or hundreds (or more) configuration options. 
