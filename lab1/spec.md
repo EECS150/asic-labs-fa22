@@ -111,12 +111,15 @@ to your instructional account username. For “Session type”, select “GNOME�
 
 ### Getting Started
 
-After you login to one of these servers, you are now ready to start the lab.  You have a limited amount of space in your home directory, so we recommend completing work in the `/home/tmp` directory, and then copying any important results to your home directory.
+After you login to one of these servers, you are now ready to start the lab.  You have a limited amount of space in your home directory, so we recommend completing work in the `/home/tmp` directory, and then copying any important results to your home directory. Your personal workspace, `/home/tmp/<your-eecs-username>` can be created by logging into the EECS Instructional WebAccount (http://inst.eecs.berkeley.edu/webacct) with your CalNet ID. Click on `More...`, then select `Make /home/tmp Directory`
+
+<p align="center">
+<img src="./figs/make_home_tmp_dir.png" width="400" />
+</p>
 
 To begin, get the lab files by typing the following commands:
 
 ```shell
-mkdir /home/tmp/<your-eecs-username>
 cd /home/tmp/<your-eecs-username>
 git clone /home/ff/eecs151/labs/lab1
 cd lab1
