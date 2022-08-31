@@ -284,6 +284,21 @@ Or to delete all lines in a file that contain a string:
 sed -e '/reset/d' force_regs.ucli
 ```
 
+You may notice that the `sed` commands above do not alter the content of the
+file and just dumps everything to the terminal.  You can pass `-i` flag to `sed`
+to edit the file in-place, but this is error-prone because you don't get to
+check if there were any mistake in your regex before the original content is lost!
+So when working with `sed`, using [Bash redirections] to save the output into a separate file
+is a good idea:
+
+```shell
+sed -e 's/\(unit_cell_\)\([0-9]\{1\}\.\)/\10\2/' force_regs.ucli > force_regs.ucli.zeropadded
+# check result is correct
+mv force_regs.ucli.zeropadded force_regs.ucli
+```
+
+[Bash redirections]: https://www.gnu.org/software/bash/manual/html_node/Redirections.html
+
 #### Question 3: Fun with Regular Expressions
 
 For each regular expression, provide an answer for both basic and extended mode (`sed` and `sed -r`).
