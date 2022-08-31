@@ -293,8 +293,6 @@ is a good idea:
 
 ```shell
 sed -e 's/\(unit_cell_\)\([0-9]\{1\}\.\)/\10\2/' force_regs.ucli > force_regs.ucli.zeropadded
-# check result is correct
-mv force_regs.ucli.zeropadded force_regs.ucli
 ```
 
 Manpages are helpful resources to learn more about what different flags of the
@@ -473,4 +471,4 @@ Modified By:
 - Sean Huang (2021)
 - Daniel Grubb, Nayiri Krzysztofowicz, Zhaokai Liu (2021)
 - Dima Nikiforov (2022)
-- Roger Hsiao (2022)
+- Roger Hsiao, Hansung Kim (2022)
