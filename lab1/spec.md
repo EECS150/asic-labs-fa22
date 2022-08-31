@@ -297,6 +297,14 @@ sed -e 's/\(unit_cell_\)\([0-9]\{1\}\.\)/\10\2/' force_regs.ucli > force_regs.uc
 mv force_regs.ucli.zeropadded force_regs.ucli
 ```
 
+Manpages are helpful resources to learn more about what different flags of the
+commands do:
+
+```shell
+man sed
+/-r
+```
+
 [Bash redirections]: https://www.gnu.org/software/bash/manual/html_node/Redirections.html
 
 #### Question 3: Fun with Regular Expressions
