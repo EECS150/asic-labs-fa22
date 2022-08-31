@@ -34,6 +34,13 @@ git clone /home/ff/eecs151/labs/lab2
 cd lab2
 ```
 
+## Submitting Your Jobs
+
+This semester, we will use a new SLURM cluster to manage all the workloads. Due to the high number of students, please do not run any compute-heavy jobs on the eda machines to avoid clogging up the login nodes, such as simulation, synthesis, or layout (Small scripts are okay). To submit your job to SLURM, prepend the command with `srun`. For example, `make sim-rtl` becomes `srun make sim-rtl`. For more information on SLURM commands, please visit the [official documentation](https://slurm.schedmd.com/overview.html). The course staff will be closely monitoring the usage of our computing resources, if there are any improper uses (e.g., running a long RTL simulation on the eda machines), we may terminate your running jobs and notify you.
+
+****For this class, all `make` commands should be run on the SLURM cluster.**
+
+
 ## The ASIC Design Flow
 
 Here is a basic diagram of a VLSI design flow, in an ideal world where
@@ -100,11 +107,9 @@ the filter design itself, but it serves as a useful example of a digital circuit
 code. As such, Verilog code for this FIR filter is provided in the src folder.
 
 
+ 
+
 ## Simulation Environment
-
-This semester, we will use a new SLURM cluster to manage all the workloads. Due to the high number of students, please do not run any compute-heavy jobs on the eda machines to avoid clogging up the login nodes, such as simulation, synthesis, or layout (Small scripts are okay). For this class, all the `make` jobs should be run on the SLURM cluster. To submit your job to SLURM, prepend the command with `srun`. For example, `make sim-rtl` becomes `srun make sim-rtl`. For more information on SLURM commands, please visit the [official documentation](https://slurm.schedmd.com/overview.html). The course staff will be closely monitoring the usage of our computing resources, if there are any improper uses (e.g., running a long RTL simulation on the eda machines), we may terminate your running jobs and notify you. 
-
-### Software Simulation
 
 We will be using Synopsys VCS as our Verilog simulator in this course.
 VCS works by compiling Verilog modules and generating a simulator binary file. 
@@ -250,7 +255,7 @@ Let us look at the waveforms in a graphical viewer DVE (Discovery Visualization 
 -X or -Y flag. If you are using PuTTy, make sure to enable X11 forwarding and have the proper
 X server software installed. An example of an X server for Windows is a program called VcXsrv,
 although there are a ton of other options). A faster, smoother, cross-platform alternative would be
-to use X2Go (recommended option, see Lab 1 for instructions).
+to use X2Go (recommended option, see Lab 1 for instructions). Additional note: the SLURM cluster currently doesn't support X11 forwarding, so the `dve` command should be run on the eda machines (without `srun`).
 
 ```shell
 cd build/sim-rundir
