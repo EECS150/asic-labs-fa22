@@ -26,17 +26,27 @@ We will focus on RTL, or Register Transfer Level, simulation in this lab, but we
 
 As with the previous lab, we will be using the Cory instructional machines (again, preferably `eda-[1-12].eecs.berkeley.edu`, but also `c111-[1-17].eecs.berkeley.edu`).
 
-To begin this lab, get the project files (again, we recommend working in the `/scratch/<your login name>/`:
+To begin this lab, get the project files (again, we recommend working in the `/home/tmp/<your-eecs-username>/`:
 
 ```shell
-cd /scratch/<your login name>/
+cd /home/tmp/<your-eecs-username>/
 git clone /home/ff/eecs151/labs/lab2
 cd lab2
 ```
 
 ## Submitting Your Jobs
 
-This semester, we will use a new SLURM cluster to manage all the workloads. Due to the high number of students, please do not run any compute-heavy jobs on the eda machines to avoid clogging up the login nodes, such as simulation, synthesis, or layout (Small scripts are okay). To submit your job to SLURM, prepend the command with `srun`. For example, `make sim-rtl` becomes `srun make sim-rtl`. For more information on SLURM commands, please visit the [official documentation](https://slurm.schedmd.com/overview.html). The course staff will be closely monitoring the usage of our computing resources, if there are any improper uses (e.g., running a long RTL simulation on the eda machines), we may terminate your running jobs and notify you.
+This semester, we will use a new SLURM cluster to manage all the workloads. Due
+to the high number of students, please do not run any compute-heavy jobs on the
+eda machines to avoid clogging up the login nodes, such as simulation,
+synthesis, or layout (Small scripts are okay). To submit your job to SLURM,
+prepend the command with `srun`. For example, `make sim-rtl` becomes `srun make
+sim-rtl`. For more information on SLURM commands, please visit the [official
+documentation](https://slurm.schedmd.com/overview.html).
+
+The course staff will be closely monitoring the usage of our computing
+resources, if there are any improper uses (e.g., running a long RTL simulation
+on the eda machines), we may terminate your running jobs and notify you.
 
 ****For this class, all `make` commands should be run on the SLURM cluster.**
 
