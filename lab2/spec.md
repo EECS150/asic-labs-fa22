@@ -218,7 +218,7 @@ You may find it useful to add these commands to your `.bashrc` so you don't need
 Now, let’s run a basic RTL simulation and look at the terminal output:
 
 ```shell
-make sim-rtl
+srun make sim-rtl
 ```
 
 Here is a summary of what you should see when you scroll through the terminal output after it
@@ -496,7 +496,7 @@ after it is finished. Notice that in this invocation we are overriding the `SIM_
 variable from the command line (later labs will use a different make rule):
 
 ```shell
-make sim-rtl SIM_RTL_CONF=sim-gl-syn.yml
+srun make sim-rtl SIM_RTL_CONF=sim-gl-syn.yml
 ```
 
 To understand what we will see in the waveforms, open `src/post-syn/fir.mapped.sdf`, and go
@@ -731,4 +731,4 @@ Modified By:
 - Sean Huang (2021)
 - Daniel Grubb, Nayiri Krzysztofowicz, Zhaokai Liu (2021)
 - Dima Nikiforov (2022)
-- Roger Hsiao (2022)
+- Roger Hsiao, Hansung Kim (2022)
