@@ -102,6 +102,10 @@ code. As such, Verilog code for this FIR filter is provided in the src folder.
 
 ## Simulation Environment
 
+This semester, we will use a new SLURM cluster to manage all the workloads. Due to the high number of students, please do not run any compute-heavy jobs on the eda machines to avoid clogging up the login nodes, such as simulation, synthesis, or layout (Small scripts are okay). For this class, all the `make` jobs should be run on the SLURM cluster. To submit your job to SLURM, prepend the command with `srun`. For example, `make sim-rtl` becomes `srun make sim-rtl`. For more information on SLURM commands, please visit the [official documentation](https://slurm.schedmd.com/overview.html). The course staff will be closely monitoring the usage of our computing resources, if there are any improper uses (e.g., running a long RTL simulation on the eda machines), we may terminate your running jobs and notify you. 
+
+### Software Simulation
+
 We will be using Synopsys VCS as our Verilog simulator in this course.
 VCS works by compiling Verilog modules and generating a simulator binary file. 
 You can then execute that binary file to produce the desired outputs. 
@@ -692,7 +696,7 @@ parameters (e.g. temperature, timing) must also be simulated to maximize product
 
 ## Lab Deliverables
 
-### Lab Due: 11:59 PM, Friday February 4th, 2022
+### Lab Due: 11:59 PM, Friday September 16th, 2022
 
 - Submit a written report with all 6 questions answered to Gradescope
 
@@ -712,3 +716,4 @@ Modified By:
 - Sean Huang (2021)
 - Daniel Grubb, Nayiri Krzysztofowicz, Zhaokai Liu (2021)
 - Dima Nikiforov (2022)
+- Roger Hsiao (2022)
