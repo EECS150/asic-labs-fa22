@@ -81,7 +81,7 @@ username. You can also use WinSCP (winscp.net) for file transfer over SSH.
 Advanced users may wish to install Windows Subsystem for Linux (https://docs.microsoft.com/en-us/windows/wsl/install-win10, Windows 10 build 16215 or later) or Cygwin (cygwin.com) and use SSH, SFTP, and SCP through there.
 
 
-#### SSHL Session Management
+#### SSH Session Management
 
 Because all your work will be done remotely, we recommend that you utilize SSH session management tools and that all terminal-based work be done over SSH. This would allow your remote terminal sessions to remain active even if your SSH session disconnects, intentionally or not.
 The two most common session managers are tmux and screen. These run persistently on the
@@ -306,7 +306,7 @@ A tutorial about file permissions can be found here: http://www.tutorialspoint.c
 
 #### Question 4: Understanding File Permissions
 
-For each task below, please provide the commands that result in the correct permissions being set. Make no assumptions about the file's existing permissions. Operate on the `run_always.sh` script.
+For each task below, please provide the commands that result in the correct permissions being set. Make no assumptions about the file's existing permissions. Operate on the `runalways.sh` script.
 
 1. Change the script to be executable by you and no one else.
 2. Add permissions for everyone in your group to be able to execute the same script
