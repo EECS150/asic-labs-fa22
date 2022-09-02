@@ -36,16 +36,25 @@ cd lab2
 
 ## Submitting Your Jobs
 
-This semester, we will use a new SLURM cluster to manage all the workloads. Due
+This semester, we will use a new Slurm cluster to manage all the workloads. Due
 to the high number of students, please do not run any compute-heavy jobs on the
 eda machines to avoid clogging up the login nodes, such as simulation,
-synthesis, or layout (Small scripts are okay). To submit your job to SLURM,
-prepend the command with `srun`. For example, `make sim-rtl` becomes `srun make
-sim-rtl`. For more information on SLURM commands, please visit the [official
+synthesis, or layout (Small scripts are okay). For the most part, Hammer 
+(a tool introduced in a later section of this lab) will take care of submitting 
+your jobs to the compute nodes through Slurm. The submission settings can be found 
+at the bottom of the `lab2/asap7.yml` file:
+
+```yaml
+vlsi.submit.command: "slurm"
+vlsi.submit.settings:
+  - slurm: {srun_binary: "srun", extra_args: []}
+```
+
+For more information on Slurm, please visit the [official
 documentation](https://slurm.schedmd.com/overview.html).
 
 The course staff will be closely monitoring the usage of our computing
-resources, if there are any improper uses (e.g., running a long RTL simulation
+resources. If there are any improper uses (e.g., running a long RTL simulation
 on the eda machines), we may terminate your running jobs and notify you.
 
 ****For this class, all `make` commands should be run on the SLURM cluster.**
@@ -209,16 +218,14 @@ which you use Hammer on the instructional machines:
 
 ```shell
 source /home/ff/eecs151/tutorials/eecs151.bashrc
-export HAMMER_HOME=/home/ff/eecs151/hammer
-source $HAMMER_HOME/sourceme.sh
 ```
 
-You may find it useful to add these commands to your `.bashrc` so you don't need to run them manually every time.
+You may find it useful to add this command to your `.bashrc` so you don't need to run it manually every time.
 
 Now, let’s run a basic RTL simulation and look at the terminal output:
 
 ```shell
-srun make sim-rtl
+make sim-rtl
 ```
 
 Here is a summary of what you should see when you scroll through the terminal output after it
@@ -265,7 +272,7 @@ Let us look at the waveforms in a graphical viewer DVE (Discovery Visualization 
 -X or -Y flag. If you are using PuTTy, make sure to enable X11 forwarding and have the proper
 X server software installed. An example of an X server for Windows is a program called VcXsrv,
 although there are a ton of other options). A faster, smoother, cross-platform alternative would be
-to use X2Go (recommended option, see Lab 1 for instructions). Additional note: the SLURM cluster currently doesn't support X11 forwarding, so the `dve` command should be run on the eda machines (without `srun`).
+to use X2Go (recommended option, see Lab 1 for instructions).
 
 ```shell
 cd build/sim-rundir
@@ -496,7 +503,7 @@ after it is finished. Notice that in this invocation we are overriding the `SIM_
 variable from the command line (later labs will use a different make rule):
 
 ```shell
-srun make sim-rtl SIM_RTL_CONF=sim-gl-syn.yml
+make sim-rtl SIM_RTL_CONF=sim-gl-syn.yml
 ```
 
 To understand what we will see in the waveforms, open `src/post-syn/fir.mapped.sdf`, and go
