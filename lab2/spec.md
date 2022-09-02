@@ -217,7 +217,7 @@ To get started, let’s set up our environment. You will need to do this for eve
 which you use Hammer on the instructional machines:
 
 ```shell
-source /home/ff/eecs151/tutorials/eecs151.bashrc
+source /home/ff/eecs151/asic/eecs151.bashrc
 ```
 
 You may find it useful to add this command to your `.bashrc` so you don't need to run it manually every time.
