@@ -250,9 +250,7 @@ bug that is hard to track down.
 the target working directory. sim is the action, so our simulation environment and results
 are in the `build/sim-rundir` folder. In that folder, you will see the binary executable: the
 simv file.
-8. This binary file is then executed with a TCL script argument `build/sim-rundir/run.tcl`,
-with the options `-ucli -do run.tcl`. This is enabled by the option `-P access.tab`.
-9. At the end, the simulation should report the observed values with the expected and actual
+8. At the end, the simulation should report the observed values with the expected and actual
 values at each timestep, and they should match. You can even automate the checking of these
 outputs in either the testbench itself or through parsing the output text directly, but that
 will be explained in more detail later.
