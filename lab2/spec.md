@@ -718,7 +718,7 @@ parameters (e.g. temperature, timing) must also be simulated to maximize product
 
 ## Lab Deliverables
 
-### Lab Due: 11:59 PM, Friday September 16th, 2022
+### Lab Due: 11:59 PM, 1 week after your registered lab section.
 
 - Submit a written report with all 6 questions answered to Gradescope
 
