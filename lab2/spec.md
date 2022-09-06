@@ -722,6 +722,9 @@ parameters (e.g. temperature, timing) must also be simulated to maximize product
 
 - Submit a written report with all 6 questions answered to Gradescope
 
+
+**NOTE: Gradescope has multiple assignments for the various lab sections. Please only submit to your registered section.**
+
 ## Acknowledgement
 
 This lab is the result of the work of many EECS151/251 GSIs over the years including:
