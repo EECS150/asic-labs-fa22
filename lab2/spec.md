@@ -255,6 +255,10 @@ values at each timestep, and they should match. You can even automate the checki
 outputs in either the testbench itself or through parsing the output text directly, but that
 will be explained in more detail later.
 
+**Note**: If you rerun `make sim-rtl` without changing any code, the simulation
+does not run and the command seems to fail with an error.  You can disregard
+this error as this is simply VCS skipping redundant recompiling and re-running
+simulation for the same design.
 
 ## Viewing Waveforms
 
