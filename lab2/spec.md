@@ -657,10 +657,10 @@ annotated switching activity onto the layout database, taking into account the c
 Voltus dumps reports in the `build/power-rundir` directory. There are results for static and active
 power analysis. The static power analysis (in `staticPowerReports` folder) by default assumes an
 average switching activity factor of 0.2 (nets switch 20% of the time), while the active power analysis
-(in `activePower.post-par-sim.ucli.saif` folder) uses the information from the SAIF. Depending
+(in `activePowerReports` folder) uses the information from the SAIF. Depending
 on the testbench, there could be a large difference between the static and active estimates.
 
-Open `build/power-rundir/activePower.post-par-sim.ucli.saif/PVT_0P77V_0C.hold_view.rpt`
+Open `build/power-rundir/activePowerReports/PVT_0P77V_0C.hold_view.rpt`
 and scroll to the bottom of the file. The total power is grouped into 3 types: internal, switching,
 and leakage power.
 
@@ -679,7 +679,7 @@ that our power is dominated by combinational logic.
 
 ### Question 6: Analyzing Power Reports
 
-**a.)** Also open up `build/power-rundir/activePower.post-par-sim.ucli.saif/PVT_0P63V_100C.setup_view.rpt`.
+**a.)** Also open up `build/power-rundir/activePowerReports/PVT_0P63V_100C.setup_view.rpt`.
 What is the most obvious difference in the power numbers
 compared to the hold view file? What do you think is the dominant factor contributing to this
 difference?
