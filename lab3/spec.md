@@ -32,9 +32,7 @@ so that every time
 you open a new terminal you have the paths for the tools setup properly.
 
 ```shell
-source /home/ff/eecs151/tutorials/eecs151.bashrc
-export HAMMER_HOME=/home/ff/eecs151/hammer
-source ${HAMMER_HOME}/sourceme.sh
+source /home/ff/eecs151/asic/eecs151.bashrc
 ```
 
 Type
@@ -343,8 +341,6 @@ only run the steps we want. Go through the following commands in the given order
 
 In this step, Hammer invokes Genus to read the technology libraries and the RTL Verilog files, as well as the constraints we
 provided in the `design.yml` file.
-Hammer will exit with an error, which is expected as Hammer looks for the final synthesis output
-files to gauge its success. We have not yet generated the gate-level Verilog, so we know Hammer will display an error after every step except the last one.
 
     make redo-syn HAMMER_EXTRA_ARGS="--stop_after_step syn_generic"
 
