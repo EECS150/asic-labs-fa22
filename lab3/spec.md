@@ -60,7 +60,7 @@ configure the Hammer flow. Of these YAML files, you should only need to modify `
 design.
 
 
-Hammer is already setup at `/home/ff/eecs151/hammer` with all the required plugins for Cadence
+Hammer is already setup at `/home/ff/eecs151/asic/hammer` with all the required plugins for Cadence
 Synthesis (Genus) and Place-and-Route (Innovus), Synopsys Simulator (VCS), Mentor Graphics
 DRC and LVS (Calibre). You should not need to install it on your own home directory. **These
 Hammer plugins are under NDA. They are provided to us for educational purpose.
