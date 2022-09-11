@@ -64,7 +64,7 @@ Hammer is already setup at `/home/ff/eecs151/asic/hammer` with all the required 
 Synthesis (Genus) and Place-and-Route (Innovus), Synopsys Simulator (VCS), Mentor Graphics
 DRC and LVS (Calibre). You should not need to install it on your own home directory. **These
 Hammer plugins are under NDA. They are provided to us for educational purpose.
-They should never be copied outside of instructional machines under any circumstances or else we are at risk of unable to get access to the tools in the future!!!**
+They should never be copied outside of instructional machines under any circumstances or else we are at risk of losing access to these tools in the future!!!**
 
 Let us take a look at some parts of `design.yml` file:
 
