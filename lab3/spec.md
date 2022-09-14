@@ -429,10 +429,10 @@ divider instead of the GCD module when testing.
 
 ## Lab Deliverables
 
-### Lab Due: 11:59 PM, Friday February 18th, 2021
+### Lab Due: 11:59 PM, 1 week after your registered lab section.
 
-- Submit a written report with all 6 questions answered to Gradescope
-- Checkoff with an ASIC lab TA
+- **Submit** a written report in PDF with all 6 questions answered to Gradescope
+- **Checkoff** with an ASIC lab TA
 
 ## Acknowledgement
 
