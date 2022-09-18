@@ -20,7 +20,12 @@ This lab contains a series of conceptual questions labeled as *thought experimen
 To begin this lab, get the project files and set up your environment by typing the following command and sourcing the `eecs151.bashrc` file, as usual:
 
 ```shell
+source /home/ff/eecs151/asic/eecs151.bashrc
+```
+
+```shell
 git clone /home/ff/eecs151/labs/lab4.git
+cd lab4
 ```
 
 You should also clean up the build directory generated from the previous labs to save some disk space.
