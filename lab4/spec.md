@@ -338,10 +338,10 @@ Demonstrate the functionality of your ALU and testbench.
 
 ## Lab Deliverables
 
-### Lab Due: 11:59 PM, Friday February 25th, 2022
+### Lab Due: 11:59 PM, 1 week after your registered lab section.
 
-- Submit a written report with all 4 questions answered to Gradescope
-- Checkoff with an ASIC lab TA
+- **Submit** a written report in PDF with all 4 questions answered to Gradescope
+- **Checkoff** with an ASIC lab TA
 
 ## Acknowledgement
 
