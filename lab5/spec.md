@@ -3,7 +3,7 @@
 Prof. Sophia Shao
 </p>
 <p align="center">
-TAs (ASIC): Dima Nikiforov
+TAs (ASIC): Erik Anderson, Roger Hsiao, Hansung Kim, Richard Yan
 </p>
 <p align="center">
 Department of Electrical Engineering and Computer Science
@@ -18,7 +18,11 @@ Like last week, this lab has two parts. For the first part, we will continue to 
 coprocessor by improving its performance. After that, we will continue the physical design flow by
 performing routing.
 
-To begin this lab, get the project files and set up your environment by typing the following commands:
+To begin this lab, get the project files and set up your environment by typing the following command and sourcing the `eecs151.bashrc` file, as usual:
+
+```shell
+source /home/ff/eecs151/asic/eecs151.bashrc
+```
 
 ```shell
 git clone /home/ff/eecs151/labs/lab5.git
@@ -97,7 +101,7 @@ make par
 The PAR command will take a long time to complete, as it runs through all stages of PAR. 
 Check out the iterations that Innovus runs through during optimization.  You can see some of the metrics that Innovus is using.
 Once it completes, take a look at the build directory as in the previous labs. You might see additional files
-compare to the `syn-rundir`, and that’s because the PAR flow incorporates the RC and parasitic delays, in addition to the cell delays. Open `build/par-rundir/gcd_coprocessor.setup.par.spef`
+compare to the `syn-rundir`, and that’s because the PAR flow incorporates the RC and parasitic delays, in addition to the cell delays. Open `build/par-rundir/gcd_coprocessor.PVT_0P63V_100C.par.spef`
 and search for the first occurrence of `D_NET`. What does it say about the first net? You may find
 [this wiki page](https://en.wikipedia.org/wiki/Standard_Parasitic_Exchange_Format#Parasitics) helpful. *(thought experiment #1 : get a sense of the units at the top and orders of magnitude of the RC parasitics in the SPEF file. If we used a 5nm technology library, do you expect the resistance to generally increase or decrease? How about the capacitance?)*
 
@@ -166,7 +170,7 @@ After running `make sim-gl-par` you can run power analysis using:
 make power-par
 ```
 
-Navigate to `build/power-rundir/activePowerReports` and open `PVT_0P63V_100C.setup_view.rpt`. Do
+Navigate to `build/power-rundir/activePowerReports.PVT_0P63V_100C.setup_view/` and open `power.rpt`. Do
 the power estimation numbers match your expectation?
 
 ---
@@ -194,7 +198,7 @@ by writing out every possible case explicitly. You can limit the number of units
 
 ## Lab Deliverables
 
-### Lab Due 11:59 PM, Friday Mar 11th, 2022
+### Lab Due 11:59 PM, 2 weeks after your registered lab section. (Oct. 17 for lab section 1)
 
 - Submit a written report with all 4 questions answered to Gradescope
 - Checkoff with an ASIC lab TA
@@ -217,3 +221,4 @@ Modified By:
 - Sean Huang (2021)
 - Daniel Grubb, Nayiri Krzysztofowicz, Zhaokai Liu (2021)
 - Dima Nikiforov (2022)
+- Roger Hsiao (2022)
