@@ -439,7 +439,7 @@ Show the DRC and LVS results, and explain the meaning of what you see.
 
 ## Lab Deliverables
 
-### Lab Due: 11:59 PM, 1 week after your registered lab section. (Oct. 24 for lab section 1)
+### Lab Due: 11:59 PM, 2 weeks after your registered lab section. (Oct. 31 for lab section 1)
 
 - Submit a written report with all 3 questions (4 if doing extra credit) answered to Gradescope
 - Checkoff with an ASIC lab TA
