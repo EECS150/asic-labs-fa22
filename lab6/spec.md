@@ -3,7 +3,7 @@
 Prof. Sophia Shao
 </p>
 <p align="center">
-TAs (ASIC): Dima Nikiforov
+TAs (ASIC): Erik Anderson, Roger Hsiao, Hansung Kim, Richard Yan
 </p>
 <p align="center">
 Department of Electrical Engineering and Computer Science
@@ -35,6 +35,10 @@ unintended shorts between power/ground/signals, and more that would prevent the 
 working. Often, these stem from improper abstraction of the macro cells for the PAR tool.
 
 To begin this lab, get the project files and set up your environment by typing the following command and sourcing the `eecs151.bashrc` file, as usual:
+
+```shell
+source /home/ff/eecs151/asic/eecs151.bashrc
+```
 
 ```shell
 git clone /home/ff/eecs151/labs/lab6.git
@@ -136,12 +140,13 @@ database that Innovus will use, type the following command:
 make srams
 ```
 
-For simulation purposes, a Verilog behavioral model for the SRAMs from the HAMMER repository
-is used. This is automatically set up in build/sram generator-output.json and points to `/home/ff/eecs151/hammer/src/hammer-vlsi/technology/asap7/sram_compiler/memories/behavioral/sram_behav_models.v`.
+For simulation purposes, Verilog behavioral models for the SRAMs from the HAMMER repository
+is used. This is automatically generated and is cached under `build/tech-asap7-cache`. 
 
-This file includes models for various types of SRAMs. You can find SRAMs that have only singleport for Read and Write, or SRAMs with different address widths and data widths. For your final
-project, you need to select the appropriate SRAM models to meet the specification. The SRAM
-models in this file are only intended for simulation, **do not include this file in your project configuration for Synthesis or PAR**, otherwise, it will mess up with your post-Synthesis or
+This directory includes models for various types of SRAMs. You can find SRAMs that have only singleport
+for Read and Write, or SRAMs with different address widths and data widths. For your final
+project, you need to select the appropriate SRAM models to meet the specification. These SRAM
+models are only intended for simulation, **do not include these files in your project configuration for Synthesis or PAR**, otherwise, it will mess up with your post-Synthesis or
 post-PAR netlist.
 
 For Synthesis and PAR, the SRAMs must be abstracted away from the tools, because the only
@@ -152,13 +157,13 @@ are located at:
 
 ```shell
 # Liberty Timing File       -- delay information
-/home/ff/eecs151/hammer/src/hammer-vlsi/technology/asap7/sram_compiler/memories/lib/ 
+/home/ff/eecs151/asic/hammer/src/hammer-vlsi/technology/asap7/sram_compiler/memories/lib/ 
 
 # Library Exchange Format   -- placement information
-/home/ff/eecs151/hammer/src/hammer-vlsi/technology/asap7/sram_compiler/memories/lef/ 
+/home/ff/eecs151/asic/hammer/src/hammer-vlsi/technology/asap7/sram_compiler/memories/lef/ 
 
 # Graphical Database System -- final layout information
-/home/ff/eecs151/hammer/src/hammer-vlsi/technology/asap7/sram_compiler/memories/gds/ 
+/home/ff/eecs151/asic/hammer/src/hammer-vlsi/technology/asap7/sram_compiler/memories/gds/ 
 
 ```
 
@@ -192,16 +197,16 @@ running DRC, LVS, and sending the design off to the fabrication house.
 ---
 
 ### Question 1: Understanding SRAMs
-**a)** Open the file `sram_behav_models.v` (located in HAMMER repository). 
+**a)** Open the `tech-asap7-cache` directory. If you do not see this directory, make sure you ran `make srams`.
 **What are different SRAM-sizes available?** 
 **What is the difference between the `SRAM1RW*` and `SRAM2RW*` variants?** 
 Hint: take some time to look at the Verilog implementation to understand what it does. You will need to use this SRAM model in the final project.
 
-**b)** In the same file, select an SRAM instance that has a BYTEMASK pin. 
+**b)** In the same directory, take a look at `SRAM1RW256x128.v`. 
 **What is the SRAM model (in terms of number of Read/Write ports, address width, data/word width)?** 
-**Briefly describe the purpose the BYTEMASK. In which situation do you think it is useful?**
+**If this model had a field named BYTEMASK, what would it do? In which situation do you think it might be useful?**
 
-*c) (Ungraded thought experiment #1) SRAM libraries in real process technologies are much larger than the list you see in `sram_behav_models.v`. What features do you think are important for real SRAM libraries? Think in terms of number of ports, masking, improving yield, or anything else you can think of. What would these features do to the size of the SRAM macros?*
+*c) (Ungraded thought experiment #1) SRAM libraries in real process technologies are much larger than the list you see in `tech-asap7-cache`. What features do you think are important for real SRAM libraries? Think in terms of number of ports, masking, improving yield, or anything else you can think of. What would these features do to the size of the SRAM macros?*
 
 *d) (Ungraded thought experiment #2) SRAMs should be integrated very densely in a circuit’s layout. To build large SRAM arrays, often times many SRAM macros are tiled together, abutted on one or more sides. Knowing this, take a guess at how SRAMs are laid out.*
 
@@ -228,7 +233,7 @@ cd build/sim-rundir
 dve -vpd vcdplus.vpd
 ```
 
-The simulation takes 35 cycles to complete, which makes sense since it spends the first 16 cycles
+The simulation takes 36 cycles to complete, which makes sense since it spends the first 16 cycles
 to read data from vector `a` and `b`, and performs a dot product computation in 16 cycles, including
 extra few cycles for various state transitions. The goal is not building the most efficient dot product
 implementation, but rather providing you an introductory design to how you would interface with
@@ -333,7 +338,7 @@ Remember that Latency (ns) = Number of Post-PAR simulation cycles × Lowest Post
 The SRAMs will have 0 power due to incomplete LIBs–show where this shows up in the power reports.
 
 ### Checkoff 1: Modified Design
-Explain the updated vector unit design, and show the updated layout.
+Explain the updated vector unit design, and show the updated layout. Demonstrate that your design works on the testbench (make sure to update module names in the testbench and yaml files).
 
 ---
 ### [Optional, Extra Credit] Question 3: Divide Your Vector Dot Products
@@ -388,8 +393,8 @@ most common to least):
 
 
 We can see that our design is not clean. The rule-checking decks (Calibre script files) are incomplete
-for this PDK, so this is expected. The design rule manual (DRM) for this technology is extracted
-to your working directory under `build/tech-asap7-cache/extracted/ASAP7_PDKandLIB.tar/ASAP7_PDKandLIB_v1p5/asap7PDK_r1p5.tar.bz2/asap7PDK_r1p5/docs/asap7_drm.pdf`.
+for this PDK, so this is expected. The design rule manual (DRM) for this technology found at
+`/home/ff/eecs151/asic/technology/asap7/asap7PDK_r1p7/docs/asap7_drm.pdf`.
 
 In a design without SRAMs (i.e. not this lab or your project, but you can try it on previous labs),
 we can run LVS and view the results similarly as follows:
@@ -419,7 +424,7 @@ Note: the result count is in the format `hierarchical_count` (`flat_count`), whi
 instances of a submodule in the design. 
 **Please report the hierarchical count.**
 
-b) Skim through Chapter 1.2 of the DRM (`build/tech-asap7-cache/extracted/ASAP7_PDKandLIB.tar/ASAP7_PDKandLIB_v1p5/asap7PDK_r1p5.tar.bz2/asap7PDK_r1p5/docs/asap7_drm.pdf`). 
+b) Skim through Chapter 1.2 of the DRM (`/home/ff/eecs151/asic/technology/asap7/asap7PDK_r1p7/docs/asap7_drm.pdf`). 
 **For the violated rule with the highest numbers of occurrences less than 1000, provide a brief description of what the rule requires based on the naming convention and descriptions in Table 1.2.1 of the DRM.**
 
 *c) (Ungraded thought experiment #3) If the DRC rule decks are perfect, the way you floorplan your design has a large impact on whether your design can be DRC clean. What things do you think can cause violations? What about other things that are constrained in PAR other than the floorplan?*
@@ -434,7 +439,7 @@ Show the DRC and LVS results, and explain the meaning of what you see.
 
 ## Lab Deliverables
 
-### Lab Due: 11:59 PM, Friday April 1st, 2022
+### Lab Due: 11:59 PM, 1 week after your registered lab section. (Oct. 24 for lab section 1)
 
 - Submit a written report with all 3 questions (4 if doing extra credit) answered to Gradescope
 - Checkoff with an ASIC lab TA
@@ -457,3 +462,4 @@ Modified By:
 - Sean Huang (2021)
 - Daniel Grubb, Nayiri Krzysztofowicz, Zhaokai Liu (2021)
 - Dima Nikiforov (2022)
+- Richard Yan (2022)
