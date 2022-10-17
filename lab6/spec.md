@@ -393,7 +393,7 @@ most common to least):
 
 
 We can see that our design is not clean. The rule-checking decks (Calibre script files) are incomplete
-for this PDK, so this is expected. The design rule manual (DRM) for this technology found at
+for this PDK, so this is expected. The design rule manual (DRM) for this technology is found at
 `/home/ff/eecs151/asic/technology/asap7/asap7PDK_r1p7/docs/asap7_drm.pdf`.
 
 In a design without SRAMs (i.e. not this lab or your project, but you can try it on previous labs),
