@@ -3,14 +3,15 @@
 Prof. Sophia Shao
 </p>
 <p align="center">
-TAs (ASIC): Dima Nikiforov
+TAs (ASIC): Erik Anderson, Roger Hsiao, Hansung Kim, Richard Yan
 </p>
 <p align="center">
 Department of Electrical Engineering and Computer Science
 </p>
 <p align="center">
 College of Engineering, University of California, Berkeley
-</p>
+</p> 
+
 ## 1. Introduction
 
 The primary goal of this project is to familiarize students with the methods and tools of digital design. In order to make the project both interesting and useful, we will guide you through the implementation of a CPU that is intended to be integrated on a modern SoC. Working alone or in teams of 2, you will be designing a simple 3-stage CPU that implements the RISC-V ISA, developed here at UC Berkeley. If you work in a team, you must both have a complete understanding of your entire project code, and you will both receive the same grade.
@@ -108,14 +109,14 @@ The skeleton files for the project will be delivered as a git repository provide
 git clone /home/ff/eecs151/labs/project_skeleton /path/to/my/project
 ```
 
-To get a team repo, fill out the google form via the link on Piazza with your team information. Please do this even if you are working alone, as these git repos will be used for version control and as part of the final checkoff. You will receive an email with an invite link to your project repo, which you should click to join before following the directions below. 
+To get a team repo, fill out the google form via the link on Ed with your team information. Please do this even if you are working alone, as these git repos will be used for version control and as part of the final checkoff. You will receive an email with an invite link to your project repo, which you should click to join before following the directions below. 
 
 An example working flow to be able to pull from the skeleton as well as push/pull with your team repository is shown below:
 
 
 ```shell
 cd /path/to/my/project
-git remote add myOrigin git@github.com:EECS150/fa21_asic_teamXX
+git remote add myOrigin git@github.com:EECS150/fa22_asic_teamXX
 ```
 
 Then to pull changes from the skeleton, you would need to type:
