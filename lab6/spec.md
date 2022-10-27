@@ -418,7 +418,7 @@ everything, you will see this at the end a long design process, which is always 
 
 ---
 ### Question 4: DRC and LVS
-a) Scroll to the bottom of the DRC result summary report in `build/drc-rundir/drc_results.rpt`.
+a) Scroll to the bottom of the DRC result summary report in `build/drc-rundir/drc_results`.
 **For the cell `dot_product` (or whatever you named your single-SRAM vector dot product), how many total violation results do you have? How many rules did you violate?** 
 Note: the result count is in the format `hierarchical_count` (`flat_count`), which would disagree if you have many
 instances of a submodule in the design. 
