@@ -270,7 +270,7 @@ you should:
 able to auto-place them in a valid location most of the time.
 - Ensure that the hierarchical path to the macro instance is specified correctly, otherwise Innovus will not know what to place.
 - Pre-calculate valid locations for the macros. This will involve:
-  - Looking at the LEF file to find out its width and height (e.g. 12.384um × 77.184um for
+  - Looking at the LEF file to find out its width and height (e.g. 18.848um × 19.296um for
 `SRAM2RW16x16`) to make sure it fits within the core boundary/desired area.
   - Legalizing the x and y coordinates. These generally need to be a multiple of a technology
 grid to avoid layout rule violations. The most conservative rule of thumb is a multiple
@@ -284,8 +284,8 @@ are on M4.
   type: hardmacro
   x: 35.64
   y: 10.8
-  width: 12.384
-  height: 77.184
+  width: 18.848
+  height: 19.296
   orientation: r0
   top_layer: M4
 
@@ -293,8 +293,8 @@ are on M4.
   type: hardmacro
   x: 71.28
   y: 10.8
-  width: 12.384
-  height: 77.184
+  width: 18.848
+  height: 19.296
   orientation: r0
   top_layer: M4
 ```
