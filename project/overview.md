@@ -121,17 +121,17 @@ git remote add myOrigin git@github.com:EECS150/fa22_asic_teamXX
 
 Then to pull changes from the skeleton, you would need to type:
 ```shell
-git pull origin master
+git pull origin main
 ```
 
 To pull changes from your team repository you would type:
 ```shell
-git pull myOrigin master
+git pull myOrigin main
 ```
 
 And to push changes to your team repository (please do not attempt to push to the skeleton repository), you would usually want to pull first (above) and then type:
 ```shell
-git push myOrigin master
+git push myOrigin main
 ```
 
 ---
