@@ -52,9 +52,9 @@ Your cache should be at least 512 bytes; if you wish to increase the size, imple
 cache first and upgrade later.
 Use the SRAMs that are available in
 
-`/home/ff/eecs151/hammer/src/hammer-vlsi/technology/asap7/sram_compiler/memories/behavioral/sram_behav_models.v`
+`/home/ff/eecs151/verilog_lib/SRAM.v`
 
-for your data and tag arrays.
+for your data and tag arrays. Make sure to `git pull` if this file is not included in your YAML files.
 
 
 The pin descriptions for these SRAMs are as follows:
@@ -121,7 +121,7 @@ simOptions variable in the `sim-rtl.yml` file. To use your cache, comment out `+
 Take note of the cycle counts for both, you should see the cycle counts increase when you use the cache.
 
 ### 4 Checkpoint 3 Deliverables
-*Checkoff due: Apr 29 (Friday), 2022*
+*Checkoff due: Nov 25 (Friday), 2022*
 
 1. Show that all of the assembly tests and final pass using the cache
 
@@ -151,3 +151,4 @@ Modified By:
 - Sean Huang (2021)
 - Daniel Grubb, Nayiri Krzysztofowicz, Zhaokai Liu (2021)
 - Dima Nikiforov (2022)
+- Richard Yan (2022)
