@@ -27,8 +27,9 @@ There are 2 CSR related instructions that you will need to implement:
 1. `csrw tohost,t2` (short for `csrrw x0,csr,rs1` where `csr = 0x51E`)
 2. `csrwi tohost,1` (short for `csrrwi x0,csr,zimm` where `csr = 0x51E`)
 
-`csrw` will write the value from register in rs1. `csrwi` will write the immediate (stored in rs1) to
-the addressed csr. Note that you do not need to write to rd (writing to x0 does nothing).
+`csrw` will write the value from register in rs1. `csrwi` will write the
+immediate (stored in the same bit field as rs1) to the addressed csr. Note that you
+do not need to write to rd (writing to x0 does nothing).
 
 <p align="center">
 <img src="./figs/csrw.png" width="800" />
