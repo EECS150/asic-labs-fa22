@@ -60,6 +60,13 @@ have you done to try and optimize for these tests?
 11. Is there anything you would like to tell the staff before we grade your project?
 
 
+### Division of Labor
+
+Include a section in the report where you explain how you divided up the work between your partners.
+
+Please be specific about how each member had major contribution on different parts of the project.
+
+
 If you worked with a partner you do not need separate reports. If you are having issues with your
 partner please contact the GSI privately as soon as possible.
 
