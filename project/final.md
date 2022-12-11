@@ -64,11 +64,11 @@ have you done to try and optimize for these tests?
 
 Include a section in the report where you explain how you divided up the work between your partners.
 
-Please be specific about how each member had major contribution on different parts of the project.
+Please be specific about how each member had which contribution on different parts of the project.
 
+You do not need to have separate reports between partners. If you have had
+issues with collaboration, please contact the GSI privately as soon as possible.
 
-If you worked with a partner you do not need separate reports. If you are having issues with your
-partner please contact the GSI privately as soon as possible.
 
 <b>***The project report is due at 11:59 pm on Monday, Dec. 12. </b>
 
