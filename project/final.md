@@ -64,13 +64,12 @@ have you done to try and optimize for these tests?
 
 ### Division of Labor
 
-Include a section in the report where you explain how you divided up the work between your partners.
+Each team member will **individually** submit a division of labor report to Gradescope.
 
-Please be specific about how each member had which contribution on different parts of the project.
-
-You do not need to have separate reports between partners. If you have had
-issues with collaboration, please contact the GSI privately as soon as possible.
-
+Explain specifically about how you divided up the work, and how much you
+perceive each member contributed to the different parts of the project. If
+there were any concerns on collaboration, feel free to express it in the
+individual report.
 
 
 ## Acknowledgement
