@@ -63,7 +63,7 @@ have you done to try and optimize for these tests?
 If you worked with a partner you do not need separate reports. If you are having issues with your
 partner please contact the GSI privately as soon as possible.
 
-<b>***The project report is due at 11:59 pm on Monday, Dec. 12. <\b>
+<b>***The project report is due at 11:59 pm on Monday, Dec. 12. </b>
 
 
 
