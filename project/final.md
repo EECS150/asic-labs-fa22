@@ -27,7 +27,7 @@ graded you must submit the following items:
 * `build/par-rundir/timingReports/*`
 * `build/par-rundir/innovus.log*`
 
-These files will be used to check processor functionality and will show us your critical path, maximum operating frequency and area. During the interview session (Friday, May  6, 2022), the
+These files will be used to check processor functionality and will show us your critical path, maximum operating frequency and area. During the interview session (Friday, December 9, 2022), the
 professors and the GSI will be interviewing each team to gauge understanding of various concepts
 learned in the project, understand more about each team’s design process, and provide feedback. Your
 final report needs to answer the following questions:
@@ -62,6 +62,8 @@ have you done to try and optimize for these tests?
 
 If you worked with a partner you do not need separate reports. If you are having issues with your
 partner please contact the GSI privately as soon as possible.
+
+***The project report is due at 11:59 pm on Monday, Dec. 12.
 
 
 
