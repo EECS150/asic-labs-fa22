@@ -16,6 +16,8 @@ College of Engineering, University of California, Berkeley
 
 ## Final Project Deliverables
 
+<b>***The project report is due at 11:59 pm on Monday, Dec. 12. </b>
+
 By now you should have designed a fully-functional processor from scratch! Your design should pass all assembly tests at your reported maximum frequency. Your
 design should also pass all of the benchmark tests in at your reported maximum frequency, and you
 should report the cycle count for each of those tests. By the due date (Monday, May 9, 2022), each
@@ -68,9 +70,6 @@ Please be specific about how each member had which contribution on different par
 
 You do not need to have separate reports between partners. If you have had
 issues with collaboration, please contact the GSI privately as soon as possible.
-
-
-<b>***The project report is due at 11:59 pm on Monday, Dec. 12. </b>
 
 
 
